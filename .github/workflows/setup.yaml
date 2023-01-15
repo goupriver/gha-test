@@ -1,7 +1,7 @@
 name: React app test
 on: push
 jobs:
-  hello:
+  test:
     runs-on: ubuntu-latest
     steps:
       - name: copy repo
@@ -10,3 +10,11 @@ jobs:
         run: npm ci
       - name: run test
         run: npm run test
+  deploy:
+    runs-on: ubuntu-latest
+    # needs: test
+    steps:
+      - name: print
+      - run: |
+        echo hello world!
+
