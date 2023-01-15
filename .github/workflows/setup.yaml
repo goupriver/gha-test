@@ -1,0 +1,11 @@
+name: React app test
+on: push
+jobs: 
+  runs-on: ubuntu-latest
+  steps: 
+    - name: copy repo
+      uses: actions/checkout@v3
+    - name: i deps
+      run: npm ci
+    - name: run test
+      run: npm run test
