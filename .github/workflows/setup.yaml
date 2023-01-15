@@ -3,12 +3,19 @@ on:
   push:
     branches:
       - main
+    path-ignore:
+      # - ' .github/workflows/*'
+env:
+  name: goupriver
+  # gh-secrets: ${{secrets.SSH-KEY}}
 jobs:
   test:
     runs-on: ubuntu-latest
     steps:
       - name: string
-        run: echo "${{toJSON(github)}}"
+        run: | 
+          echo "${{ toJSON(github) }}"
+          echo "${{ env.name }}"
       # - name: copy repo
       #   uses: actions/checkout@v3
       # - name: i deps
