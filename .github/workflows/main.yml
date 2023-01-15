@@ -9,5 +9,5 @@ jobs:
           echo "Hello world"
           echo "2 line print"
       - name: get repisitory code
-          uses: actions/checkout@v3
+        uses: actions/checkout@v3
         
